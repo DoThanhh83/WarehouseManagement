@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="9dp"
         android:fontFamily="@font/allura"
         android:text="Warehouse Management"
         android:textColor="#C1F8B0B0"
@@ -22,27 +22,18 @@
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <ImageButton
-        android:id="@+id/imageButtonsearch"
-        android:layout_width="58dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginLeft="315dp"
-        app:srcCompat="@drawable/ic_camera_alt_black_24dp"
-        tools:ignore="VectorDrawableCompat" />
-
     <EditText
         android:id="@+id/searchfield"
-        android:layout_width="289dp"
-        android:layout_height="35dp"
-
+        android:layout_width="330dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="-38dp"
+        android:layout_marginTop="9dp"
         android:background="#11AA9E9E"
         android:drawableLeft="@drawable/ic_search_black_24dp"
-        android:ems="10"
+        android:ems="25"
         android:hint="Search Items"
         android:inputType="textPersonName"
+        android:textAlign="center"
         android:textColor="#fff"
         android:textColorHint="#F7F2F2"
         android:textSize="16dp" />

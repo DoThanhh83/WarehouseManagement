@@ -43,8 +43,8 @@
         android:drawableLeft="@drawable/ic_account_user"
         android:ems="10"
         android:hint="User Name"
-        android:inputType="textPersonName"
         android:textColor="#fff"
+        android:inputType="textPersonName"
         android:textColorHint="#ffff"
         android:textSize="16dp" />
 
@@ -88,13 +88,6 @@
         android:textColor="#FFF"
         android:text="Forgot Password ?"
         android:clickable="true"/>
-
-    <ProgressBar
-        android:id="@+id/progressbars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
-
 
 </RelativeLayout>
 

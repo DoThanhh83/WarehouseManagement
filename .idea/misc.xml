@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/drawable/selector.xml" value="0.1" />
         <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/layout/activity_additem.xml" value="0.24791666666666667" />
         <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/layout/activity_dashboard.xml" value="0.24791666666666667" />
         <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/layout/activity_delete_items.xml" value="0.24791666666666667" />
@@ -13,6 +14,7 @@
         <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/layout/activity_splashs.xml" value="0.24791666666666667" />
         <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/layout/activity_view_inventory.xml" value="0.24791666666666667" />
         <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/layout/list_layout.xml" value="0.24791666666666667" />
+        <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/menu/menu.xml" value="0.24739583333333334" />
         <entry key="..\:/WarehouseManagement/WarehouseManagement/app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>

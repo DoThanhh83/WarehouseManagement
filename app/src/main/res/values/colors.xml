@@ -11,4 +11,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="darkBlue">#495867</color>
+    <color name="blue">#577399</color>
+    <color name="lightBlue">#bdd5ea</color>
+
+    <color name="darkGrey">#595858</color>
+    <color name="alertRed">#ff3366</color>
 </resources>
