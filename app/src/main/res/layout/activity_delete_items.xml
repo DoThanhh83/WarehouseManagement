@@ -53,12 +53,11 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView3"
         android:layout_centerHorizontal="true"
-
+        android:background="#6613FA"
         android:layout_marginBottom="-70dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Delete Item"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="211dp" />
+        android:textSize="17dp"/>
 
 </RelativeLayout>

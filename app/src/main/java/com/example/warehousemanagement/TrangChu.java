@@ -14,7 +14,7 @@ public class TrangChu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan_items);
+        setContentView(R.layout.activity_dashboard);
 
     }
 }
