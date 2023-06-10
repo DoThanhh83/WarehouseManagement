@@ -53,7 +53,7 @@
                     android:background="#FFFFFF">
 
                     <ImageView
-                        android:id="@+id/imgInport"
+                        android:id="@+id/imgImport"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/input"/>
