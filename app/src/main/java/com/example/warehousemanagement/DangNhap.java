@@ -6,12 +6,20 @@ import android.os.AsyncTask;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.warehousemanagement.obj.Account;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,113 +43,6 @@ import okhttp3.Response;
 import okhttp3.*;
 
 public class DangNhap extends AppCompatActivity {
-
-//    private EditText editTextEmail;
-//    private EditText editTextPassword;
-//    private Button buttonLogin;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_login);
-//
-//        editTextEmail = (EditText) findViewById(R.id.emailSignIn);
-//        editTextPassword =(EditText) findViewById(R.id.password);
-//        buttonLogin = findViewById(R.id.Login);
-//
-//        buttonLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Lấy dữ liệu từ EditText
-//                String email = editTextEmail.getText().toString();
-//                String password = editTextPassword.getText().toString();
-//
-//                // Tạo JSON object chứa dữ liệu đăng nhập
-//                JSONObject jsonObject = new JSONObject();
-//                try {
-//                    jsonObject.put("username", email);
-//                    jsonObject.put("password", password);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                // Thực hiện yêu cầu POST API bằng AsyncTask
-//                new LoginTask().execute(jsonObject.toString());
-//            }
-//        });
-//    }
-//
-//    private class LoginTask extends AsyncTask<String, Void, String> {
-//
-//
-//        @Override
-//        protected String doInBackground(String... params) {
-//            String urlString = "http://14.225.211.190:4001/api/auth/login";
-//
-//            try {
-//                URL url = new URL(urlString);
-//                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//
-//                // Cấu hình yêu cầu POST
-//                connection.setRequestMethod("POST");
-////                String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwNSIsInVzZXJuYW1lIjoidGhhbmhudi5nciIsImVtYWlsIjoidGhhbmhudi5nckBnbWFpbC5jb20iLCJhY3RpdmUiOnRydWUsInZlcmlmaWVkIjp0cnVlLCJyb2xlcyI6WyJhZG1pbiJdLCJ0ZW5hbnRJZCI6bnVsbCwiZ3JhbnRlZFRlbmFudHMiOm51bGwsImlhdCI6MTY1MzczMjU1MCwiZXhwIjoxNzQwMTMyNTUwfQ.NFvZRwE01vgnm_RkUKXQODeMQ0uRAZrIEMePkrImCT0";
-////                connection.setRequestProperty("Authorization", "Bearer " + token);
-//
-//                // Ghi dữ liệu JSON vào body của yêu cầu
-//                String jsonInputString = params[0];
-//                OutputStream outputStream = connection.getOutputStream();
-//                outputStream.write(jsonInputString.getBytes());
-//                outputStream.flush();
-//                outputStream.close();
-//
-//                // Đọc phản hồi từ máy chủ
-//                InputStream inputStream = connection.getInputStream();
-//                BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-//                StringBuilder response = new StringBuilder();
-//                String line;
-//                while ((line = reader.readLine()) != null) {
-//                    response.append(line);
-//                }
-//                reader.close();
-//                connection.disconnect();
-//        System.out.println(response);
-//                return response.toString();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//            return null;
-//        }
-//
-//        @Override
-//        protected void onPostExecute(String response) {
-//            if (response != null) {
-//                // Xử lý phản hồi từ máy chủ
-//                try {
-//                    JSONObject jsonResponse = new JSONObject(response);
-//                    String success = jsonResponse.getString("201");
-//                    String message = jsonResponse.getString("message");
-//
-//                    if (success == "201") {
-//                        // Đăng nhập thành công
-//                        Toast.makeText(DangNhap.this, "Login successful", Toast.LENGTH_SHORT).show();
-//                        // Chuyển sang TrangChuActivity
-//                        Intent intent = new Intent(DangNhap.this, TrangChu.class);
-//                        startActivity(intent);
-//                        finish();
-//                    } else {
-//                        // Đăng nhập thất bại
-//                        Toast.makeText(DangNhap.this, "Login failed: " + message, Toast.LENGTH_SHORT).show();
-//                    }
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//            } else {
-//                Toast.makeText(DangNhap.this, "Error occurred", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//    }
-
     private EditText editTextEmail;
     private EditText editTextPassword;
     private Button buttonLogin;
@@ -155,16 +56,40 @@ public class DangNhap extends AppCompatActivity {
         editTextEmail = findViewById(R.id.emailSignIn);
         editTextPassword = findViewById(R.id.password);
 
-         buttonLogin = findViewById(R.id.Login);
+        buttonLogin = findViewById(R.id.Login);
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Lấy giá trị email và password từ EditText
-                String email = "string";
-                String password = "string";
+                String email = editTextEmail.getText().toString();
+                String password = editTextPassword.getText().toString();
 
+                if (editTextEmail.getText() == null && editTextPassword.getText() == null) {
+                    View view = findViewById(R.id.password);
+//
+//                    Snackbar snackbar = Snackbar.make(view, "", Snackbar.LENGTH_SHORT);
+//                    View snackbarView = snackbar.getView();
+//                    LayoutInflater inflater = LayoutInflater.from(snackbarView.getContext());
+//                    View customSnackbarView = inflater.inflate(R.layout.custom_layout_snackbar, null);
+//                    LinearLayout snackbarLayout = customSnackbarView.findViewById(R.id.snackbar_layout);
+//                    ImageView snackbarIcon = customSnackbarView.findViewById(R.id.snackbar_icon);
+//                    TextView snackbarText = customSnackbarView.findViewById(R.id.snackbar_text);
+//
+//// Tùy chỉnh giao diện và nội dung của Snackbar
+////                    snackbarLayout.setBackgroundColor(getResources().getColor(R.color.custom_snackbar_background));
+////                    snackbarIcon.setImageResource(R.drawable.custom_snackbar_icon);
+//                    snackbarText.setText("Custom Snackbar");
+//
+//// Đặt tệp XML layout tùy chỉnh cho Snackbar
+//                    Snackbar.SnackbarLayout snackbarLay = (Snackbar.SnackbarLayout) snackbar.getView();
+//                    snackbarLay.addView(customSnackbarView, 0);
+//                    snackbar.show();
+                    System.out.println("khoong ddc null ");
+                } else {
+                    loginAPI(email, password);
+
+                }
                 // Gọi phương thức gửi yêu cầu POST API
-                loginAPI(email, password);
             }
         });
     }
@@ -186,7 +111,7 @@ public class DangNhap extends AppCompatActivity {
         Request request = new Request.Builder()
                 .url("http://14.225.211.190:4001/api/auth/login")
                 .post(requestBody)
-                .addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwNSIsInVzZXJuYW1lIjoidGhhbmhudi5nciIsImVtYWlsIjoidGhhbmhudi5nckBnbWFpbC5jb20iLCJhY3RpdmUiOnRydWUsInZlcmlmaWVkIjp0cnVlLCJyb2xlcyI6WyJhZG1pbiJdLCJ0ZW5hbnRJZCI6bnVsbCwiZ3JhbnRlZFRlbmFudHMiOm51bGwsImlhdCI6MTY1MzczMjU1MCwiZXhwIjoxNzQwMTMyNTUwfQ.NFvZRwE01vgnm_RkUKXQODeMQ0uRAZrIEMePkrImCT0")
+//                .addHeader("Authorization", "Bearer" + "" )
                 .build();
 
         // Tạo OkHttpClient
@@ -204,9 +129,13 @@ public class DangNhap extends AppCompatActivity {
             public void onResponse(Call call, Response response) throws IOException {
                 // Xử lý khi nhận được phản hồi từ server
                 String responseData = response.body().string();
-                        // Chuyển sang TrangChuActivity
-                        Intent intent = new Intent(DangNhap.this, TrangChu.class);
-                        startActivity(intent);
+                // lưu dữ liệu trả về từ api
+                Gson gson = new Gson();
+                Account account = gson.fromJson(responseData, Account.class);
+                // Chuyển sang TrangChuActivity
+                Intent intent = new Intent(DangNhap.this, TrangChu.class);
+                startActivity(intent);
+                System.out.println(responseData);
 
 
                 // Tiếp tục xử lý dữ liệu phản hồi từ server
