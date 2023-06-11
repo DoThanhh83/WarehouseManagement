@@ -15,13 +15,15 @@ public class TrangChu extends AppCompatActivity {
 
     Button btnDN;
     Button btnDangki;
-    ImageView imgImport;
+    ImageView imgImport, imgExport;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
         imgImport = findViewById(R.id.imgImport);
+        imgExport = findViewById(R.id.imgExport);
+
         imgImport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,5 +32,12 @@ public class TrangChu extends AppCompatActivity {
             }
         });
 
+        imgExport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrangChu.this, XuatSanPham.class);
+                startActivity(intent);
+            }
+        });
     }
 }
