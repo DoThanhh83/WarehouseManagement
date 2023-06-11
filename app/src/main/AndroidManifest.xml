@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Design.NoActionBar">
-
+        <activity android:name=".NhapSanPham" android:exported="true"/>
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -33,6 +33,9 @@
         android:ems="25"
         android:hint="Search Items"
         android:inputType="textPersonName"
+
+        android:gravity="center"
+
         android:textColor="#fff"
         android:textColorHint="#F7F2F2"
         android:textSize="16dp" />
