@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".XuatSanPham"></activity>
+        <activity android:name=".DsSanPham"></activity>
+        <activity android:name=".XuatSanPham" />
         <activity
             android:name=".NhapSanPham"
             android:exported="true" />
