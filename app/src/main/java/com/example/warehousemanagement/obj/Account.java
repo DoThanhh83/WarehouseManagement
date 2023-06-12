@@ -1,14 +1,14 @@
 package com.example.warehousemanagement.obj;
 
 public class Account {
-        User UserObject;
+        User user;
         private String token;
 
 
         // Getter Methods
 
         public User getUser() {
-            return UserObject;
+            return user;
         }
 
         public String getToken() {
@@ -17,8 +17,8 @@ public class Account {
 
         // Setter Methods
 
-        public void setUser(User userObject) {
-            this.UserObject = userObject;
+        public void setUser(User user) {
+            this.user = user;
         }
 
         public void setToken(String token) {

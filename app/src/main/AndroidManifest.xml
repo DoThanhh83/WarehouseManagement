@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".NhapSanPham" android:exported="true"/>
+        <activity android:name=".additem.DanhSachImport" android:exported="true"/>
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,8 @@
         <activity android:name=".TrangChu"
             ></activity>
         <activity android:name=".DangNhap"></activity>
+        <activity android:name=".profile.ProfilePage"/>
+        <activity android:name=".additem.AddImport"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

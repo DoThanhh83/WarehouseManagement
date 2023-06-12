@@ -51,6 +51,7 @@
                     android:layout_margin="16dp"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:id="@+id/btnImport"
                     android:background="#FFFFFF">
 
                     <ImageView

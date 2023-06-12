@@ -47,6 +47,12 @@ public class DangNhap extends AppCompatActivity {
     private EditText editTextEmail;
     private EditText editTextPassword;
     private Button buttonLogin;
+    public static Account account;
+
+
+    public static Account getAccount() {
+        return account;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +68,9 @@ public class DangNhap extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Lấy giá trị email và password từ EditText
-                String email = editTextEmail.getText().toString();
-                String password = editTextPassword.getText().toString();
+                String email = "admin";
+                String password = "sonha12";
+//                        editTextPassword.getText().toString();
 
                 if (editTextEmail.getText() == null && editTextPassword.getText() == null) {
                     View view = findViewById(R.id.password);
@@ -132,11 +139,12 @@ public class DangNhap extends AppCompatActivity {
                 String responseData = response.body().string();
                 // lưu dữ liệu trả về từ api
                 Gson gson = new Gson();
-                Account account = gson.fromJson(responseData, Account.class);
+                 account = gson.fromJson(responseData, Account.class);
                 // Chuyển sang TrangChuActivity
+
                 Intent intent = new Intent(DangNhap.this, TrangChu.class);
                 startActivity(intent);
-                System.out.println(responseData);
+                System.out.println( responseData);
 
 
                 // Tiếp tục xử lý dữ liệu phản hồi từ server
