@@ -12,6 +12,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity android:name=".additem.DanhSachImport" android:exported="true"/>
+        <activity android:name=".XuatSanPham" android:exported="true"/>
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
