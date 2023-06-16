@@ -13,9 +13,8 @@ import com.google.android.material.navigation.NavigationView;
 
 public class TrangChu extends AppCompatActivity {
 
-    Button btnDN;
-    Button btnDangki;
-    ImageView imgImport, imgExport;
+    Button btnDN, btnDangki;
+    ImageView imgImport, imgExport, imgProduct, imgUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +22,8 @@ public class TrangChu extends AppCompatActivity {
 
         imgImport = findViewById(R.id.imgImport);
         imgExport = findViewById(R.id.imgExport);
+        imgProduct = findViewById(R.id.imgProduct);
+        imgUser = findViewById(R.id.imgUser);
 
         imgImport.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +38,22 @@ public class TrangChu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(TrangChu.this, XuatSanPham.class);
                 startActivity(intent);
+            }
+        });
+
+        imgProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(TrangChu.this, DsSanPham.class);
+                startActivity(intent2);
+            }
+        });
+
+        imgUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(TrangChu.this, QLNguoiDung.class);
+                startActivity(intent3);
             }
         });
     }
