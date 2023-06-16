@@ -4,7 +4,7 @@
         android:title="Add product"
         android:icon="@drawable/add"/>
     <item android:id="@+id/repair_product"
-        android:title="Repair product"
+        android:title="Edit product"
         android:icon="@drawable/repair"/>
     <item android:id="@+id/delete_product"
         android:title="Delete product"
