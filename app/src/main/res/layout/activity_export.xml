@@ -14,9 +14,9 @@
         android:layout_marginLeft="140dp"
         android:layout_marginTop="9dp"
         android:fontFamily="@font/lobster"
-        android:text="Import list"
-        android:layout_weight="0.5"
+        android:text="Export list"
         android:textColor="#000000"
+        android:layout_weight="0.5"
         android:textSize="30dp"
         android:textStyle="bold"/>
 
@@ -27,7 +27,7 @@
         android:layout_weight="0.5">
 
         <EditText
-            android:id="@+id/searchImport"
+            android:id="@+id/searchExport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -44,9 +44,9 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnImportList"
+            android:id="@+id/btnDelete"
             android:layout_marginLeft="10dp"
-            android:text="ADD"
+            android:text="DELETE"
             android:textColor="#000000"
             android:background="#C5A2A2"/>
     </LinearLayout>
@@ -54,7 +54,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lvImport"
+        android:id="@+id/lvExport"
         android:textColor="#000000"
         android:layout_weight="9"/>
 
@@ -68,5 +68,5 @@
         app:itemBackground="@color/purple_500"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
-        app:menu="@menu/menu_navigation" />
+        app:menu="@menu/menu_navigation"/>
 </LinearLayout>

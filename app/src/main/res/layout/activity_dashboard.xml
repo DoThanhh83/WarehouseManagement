@@ -58,7 +58,7 @@
                         android:id="@+id/imgImport"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/input"/>
+                        android:src="@drawable/import1"/>
                     <TextView
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
@@ -84,7 +84,7 @@
                         android:id="@+id/imgExport"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
-                        android:src="@drawable/output" />
+                        android:src="@drawable/export" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -163,7 +163,4 @@
             app:itemTextColor="@drawable/selector"
             app:menu="@menu/menu_navigation" />
     </LinearLayout>
-
-
-
 </LinearLayout>
