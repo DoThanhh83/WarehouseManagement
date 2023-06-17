@@ -9,73 +9,62 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lobster"
-        android:text="Add product"
+        android:text="Edit user"
         android:textColor="#F1E6E6"
         android:textSize="30dp"
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etUsername1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"/>
+        android:hint="Username"/>
     <requestFocus/>
 
     <EditText
-        android:id="@+id/etCode"
+        android:id="@+id/etPassword1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Code" />
+        android:hint="Password" />
 
     <EditText
-        android:id="@+id/etDate"
+        android:id="@+id/etEmail1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date" />
+        android:hint="Email" />
 
     <EditText
-        android:id="@+id/etStock"
+        android:id="@+id/etName1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Stock" />
+        android:hint="Name" />
 
     <EditText
-        android:id="@+id/etNote"
+        android:id="@+id/etRole1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Note" />
+        android:hint="Role" />
 
     <EditText
-        android:id="@+id/etProducer"
+        android:id="@+id/etAddress1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Producer" />
+        android:hint="Address" />
 
     <EditText
-        android:id="@+id/etStatus"
+        android:id="@+id/etMarketID1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Status" />
+        android:hint="MarketId" />
 
-    <EditText
-        android:id="@+id/etCategory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Category" />
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnSubmitUser1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Add Item"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="211dp" />
-
+        android:text="Submit" />
 
 </LinearLayout>

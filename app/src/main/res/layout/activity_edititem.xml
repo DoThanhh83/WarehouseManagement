@@ -9,73 +9,68 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lobster"
-        android:text="Add product"
+        android:text="Edit product"
         android:textColor="#F1E6E6"
         android:textSize="30dp"
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etName2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name"/>
     <requestFocus/>
 
     <EditText
-        android:id="@+id/etCode"
+        android:id="@+id/etCode2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Code" />
 
     <EditText
-        android:id="@+id/etDate"
+        android:id="@+id/etDate2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Date" />
 
     <EditText
-        android:id="@+id/etStock"
+        android:id="@+id/etStock2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Stock" />
 
     <EditText
-        android:id="@+id/etNote"
+        android:id="@+id/etNote2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Note" />
 
     <EditText
-        android:id="@+id/etProducer"
+        android:id="@+id/etProducer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Producer" />
 
     <EditText
-        android:id="@+id/etStatus"
+        android:id="@+id/etStatus2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Status" />
 
     <EditText
-        android:id="@+id/etCategory"
+        android:id="@+id/etCategory2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Category" />
+
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnSubmit2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Add Item"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="211dp" />
-
+        android:text="Submit" />
 
 </LinearLayout>
