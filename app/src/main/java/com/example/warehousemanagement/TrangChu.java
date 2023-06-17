@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.warehousemanagement.additem.DanhSachImport;
 import com.google.android.material.navigation.NavigationView;
 
 public class TrangChu extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class TrangChu extends AppCompatActivity {
         imgImport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TrangChu.this, NhapSanPham.class);
+                Intent intent = new Intent(TrangChu.this, DanhSachImport.class);
                 startActivity(intent);
             }
         });
