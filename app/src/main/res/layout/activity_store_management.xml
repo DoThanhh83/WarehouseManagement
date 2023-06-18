@@ -15,7 +15,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="28dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="30dp"
         android:fontFamily="@font/allura"
         android:text="Store Manager"
         android:textStyle="bold"
@@ -48,7 +48,7 @@
             android:background="#FFFFFF">
 
             <ImageView
-                android:id="@+id/imgImport"
+                android:id="@+id/imgStorage"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/warehouse"/>
@@ -71,7 +71,7 @@
             android:background="#FFFFFF">
 
             <ImageView
-                android:id="@+id/imgExport"
+                android:id="@+id/imgMarket"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:src="@drawable/market" />
