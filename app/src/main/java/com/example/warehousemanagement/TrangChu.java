@@ -17,7 +17,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class TrangChu extends AppCompatActivity {
-
     Button btnDN, btnDangki;
     ImageView imgImport, imgExport, imgProduct, imgUser;
     @Override
